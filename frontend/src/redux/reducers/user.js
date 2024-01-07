@@ -1,5 +1,7 @@
 // Example reducer
 import { createReducer } from '@reduxjs/toolkit';
+import axios from "axios";
+
 import { LoadUserRequest, LoadUserSuccess, LoadUserFail } from '../actions/user';
 
 const initialState = {
