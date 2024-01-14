@@ -1,3 +1,5 @@
- export const server = "http://localhost:8080/api/v2"
+// Update the server URL in your frontend code
+export const server = "https://e-commerce-web-app-6orw.vercel.app/api/v2";
 
- export const backend_url = "http://localhost:8080/"
+// Update the server URL in your frontend code
+export const backend_url = "https://e-commerce-web-app-6orw.vercel.app/";
