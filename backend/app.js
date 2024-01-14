@@ -5,7 +5,14 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 // Middlewares
-app.use(cors()); // Enable CORS for all routes
+const corsOptions = {
+    origin: 'https://e-commerce-web-app-topaz.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    optionsSuccessStatus: 204,
+    credentials: true, // Allow credentials
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/", express.static("uploads"));
