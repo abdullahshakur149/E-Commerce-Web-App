@@ -9,10 +9,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
-app.use(cors({
-    origin: 'http://localhost:3000',  // Replace with the actual origin of your React app
-    credentials: true,
-  }));
+app.use(cors()); // Enable CORS for all routes
+
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
     require("dotenv").config({
